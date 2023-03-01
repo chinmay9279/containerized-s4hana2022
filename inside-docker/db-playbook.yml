@@ -1,0 +1,30 @@
+- name: SAP Automation in ASCS
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Create group
+      group:
+        name: sapsys
+        state: present
+        gid: 1001
+
+    - name: Create Directory
+      file:
+        path: /usr/sap/S4H/SYS
+        state: directory
+        owner: root
+        group: sapsys
+        mode: 0775
+        recurse: yes
+
+    - name: Create softlinks
+      ansible.builtin.shell:
+        cmd: ln -s /sapmnt/S4H/profile /usr/sap/S4H/SYS/profile && ln -s /sapmnt/S4H/global /usr/sap/S4H/SYS/global
+
+    - name: Install Softwares
+      ansible.builtin.shell:
+        cmd: zypper install -y libgcc_s1 libstdc++6 libatomic1 lvm* xfsprogs xfsprogs numactl util-linux uuidd util-linux-systemd libltdl7 which tcsh insserv
+
+    - name: SWPM execute for DB
+      ansible.builtin.shell:
+        cmd: cd /media/SWPM && ./sapinst SAPINST_STACK_XML=/media/sap-installation-media/MP_Stack_1001631268_2023029_.xml SAPINST_INPUT_PARAMETERS_URL=/media/swpm-helpers/DB/inifile.params SAPINST_EXECUTE_PRODUCT_ID=NW_ABAP_DB:S4HANA2022.CORE.HDB.ABAP SAPINST_SKIP_DIALOGS=true SAPINST_START_GUISERVER=false

@@ -1,0 +1,196 @@
+- name: SAP Directory creation in base server
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Create group
+      group:
+        name: sapsys
+        state: present
+
+    - name: Create SIDADM User
+      user:
+        name: s4hadm
+        group: sapsys
+        state: present
+
+    - name: Create Hana User
+      user:
+        name: hdbadm
+        group: sapsys
+        state: present
+
+    #### Create Volume Group ####
+    - name: Create Volume Group on /dev/sdc
+      community.general.lvg:
+        vg: vg-sap
+        pvs: /dev/sdc
+        pesize: 32
+
+    ##### HANA Data #####
+    - name: Create a logical volume for /hana/data
+      lvol:
+        vg: vg-sap
+        lv: lvhanadata
+        size: 400g
+
+    - name: Create a xfs file system on /dev/vg-sap/lvhanadata
+      filesystem:
+        fstype: xfs
+        dev: /dev/vg-sap/lvhanadata
+
+    - name: Create /hana/data directory
+      file:
+        path: /hana/data
+        state: directory
+        owner: hdbadm
+        group: sapsys
+        mode: 0775
+        recurse: yes
+
+    - name: Mount /hana/data
+      mount:
+        path: /hana/data
+        src: /dev/vg-sap/lvhanadata
+        fstype: xfs
+        state: mounted
+
+    ##### HANA Log #####
+    - name: Create a logical volume /hana/log
+      lvol:
+        vg: vg-sap
+        lv: lvhanalog
+        size: 150g
+
+    - name: Create a xfs file system on /dev/vg-sap/lvhanalog
+      filesystem:
+        fstype: xfs
+        dev: /dev/vg-sap/lvhanalog
+
+    - name: Create /hana/log directory
+      file:
+        path: /hana/log
+        state: directory
+        owner: hdbadm
+        group: sapsys
+        mode: 0775
+        recurse: yes
+
+    - name: Mount /hana/log
+      mount:
+        path: /hana/log
+        src: /dev/vg-sap/lvhanalog
+        fstype: xfs
+        state: mounted
+
+    ##### SAP Mount #####
+    - name: Create a logical volume /sapmnt
+      lvol:
+        vg: vg-sap
+        lv: lvsapmnt
+        size: 50g
+
+    - name: Create a xfs file system on /dev/vg-sap/lvsapmnt
+      filesystem:
+        fstype: xfs
+        dev: /dev/vg-sap/lvsapmnt
+
+    - name: Create /sapmnt directory
+      file:
+        path: /sapmnt
+        state: directory
+        owner: s4hadm
+        group: sapsys
+        mode: 0775
+        recurse: yes
+
+    - name: Mount /sapmnt
+      mount:
+        path: /sapmnt
+        src: /dev/vg-sap/lvsapmnt
+        fstype: xfs
+        state: mounted
+
+    ##### SAP Trans #####
+    - name: Create a logical volume /usr/sap/trans
+      lvol:
+        vg: vg-sap
+        lv: lvsaptrans
+        size: 50g
+
+    - name: Create a xfs file system on /dev/vg-sap/lvsaptrans
+      filesystem:
+        fstype: xfs
+        dev: /dev/vg-sap/lvsaptrans
+
+    - name: Create /usr/sap/trans directory
+      file:
+        path: /usr/sap/trans
+        state: directory
+        owner: s4hadm
+        group: sapsys
+        mode: 0775
+        recurse: yes
+
+    - name: Mount /usr/sap/trans
+      mount:
+        path: /usr/sap/trans
+        src: /dev/vg-sap/lvsaptrans
+        fstype: xfs
+        state: mounted
+
+    ##### Installation media ##### Change THIS ####
+    #### Create Logical Volume ####
+    - name: Create Volume Group on /dev/sdb
+      community.general.lvg:
+        vg: vg-media
+        pvs: /dev/sdb
+        pesize: 32
+
+    - name: Create a logical volume /media
+      lvol:
+        vg: vg-media
+        lv: lvmedia
+        size: 199g
+
+    - name: Create a xfs file system on /dev/vg-media/lvmedia
+      filesystem:
+        fstype: xfs
+        dev: /dev/vg-media/lvmedia
+
+    - name: Create /media directory
+      file:
+        path: /media
+        state: directory
+        owner: root
+        group: sapsys
+        mode: 0775
+        recurse: yes
+
+    - name: Mount /media
+      mount:
+        path: /media
+        src: /dev/vg-media/lvmedia
+        fstype: xfs
+        state: mounted
+
+    ##### SWAP #####
+    - name: Create a logical volume SWAP
+      lvol:
+        vg: vg-sap
+        lv: lvswap
+        size: 20g
+
+    - name: Create SWAP file system on /dev/vg-sap/lvswap
+      shell: mkswap /dev/vg-sap/lvswap
+      ignore_errors: true
+
+    - name: Activate SWAP
+      shell: swapon -v /dev/vg-sap/lvswap
+      ignore_errors: true
+
+    - name: Add SWAP to fstab
+      blockinfile:
+        path: /etc/fstab
+        insertafter: EOF
+        block: /dev/vg-sap/lvswap swap swap defaults 0 0
+

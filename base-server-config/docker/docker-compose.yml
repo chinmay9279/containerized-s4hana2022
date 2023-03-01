@@ -1,0 +1,82 @@
+version: "3.3"
+services:
+  db:
+    image: sles_15_4_sapdb
+    tty: true
+    privileged: true
+    container_name: sapdb
+    hostname: sapdb
+    volumes:
+      - type: bind
+        source: /media
+        target: /media
+      - type: bind
+        source: /sapmnt
+        target: /sapmnt
+      - type: bind
+        source: /hana/data
+        target: /hana/data
+      - type: bind
+        source: /hana/log
+        target: /hana/log
+    ports:
+      - "31000-31099:31000-31099"
+      - "51000-51099:51000-51099"
+
+  ascs:
+    image: sles_15_4_sapmsg
+    tty: true
+    privileged: true
+    container_name: sapmsg
+    hostname: sapmsg
+    volumes:
+      - type: bind
+        source: /media
+        target: /media
+      - type: bind
+        source: /sapmnt
+        target: /sapmnt
+      - type: bind
+        source: /usr/sap/trans
+        target: /usr/sap/trans
+    ports:
+      - "3200:3200"
+      - "3300:3300"
+      - "8000:8000"
+      - "8100:8100"
+      - "44300:44300"
+      - "50013:50013"
+      - "50014:50014"
+      - "3600:3600"
+
+  ci:
+    image: sles_15_4_sapapp
+    tty: true
+    privileged: true
+    container_name: sapapp
+    hostname: sapapp
+    volumes:
+      - type: bind
+        source: /media
+        target: /media
+      - type: bind
+        source: /sapmnt
+        target: /sapmnt
+      - type: bind
+        source: /usr/sap/trans
+        target: /usr/sap/trans
+    ports:
+      - "3201:3201"
+      - "3301:3301"
+      - "8001:8001"
+      - "50113:50113"
+      - "50114:50114"
+      - "3601:3601"
+      - "25:25"
+      - "44301:44301"
+
+networks:
+  default:
+    external:
+      name: sap-net
+

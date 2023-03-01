@@ -1,0 +1,41 @@
+- name: SAP Automation in APP
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Create group
+      group:
+        name: sapsys
+        state: present
+        gid: 1001
+
+    - name: Create SIDADM User
+      user:
+        name: s4hadm
+        group: sapsys
+        state: present
+        uid: 1001
+
+    - name: Create Hana User
+      user:
+        name: hdbadm
+        group: sapsys
+        state: present
+        uid: 1002
+
+    - name: Create Directory
+      file:
+        path: /usr/sap/S4H/SYS
+        state: directory
+        owner: s4hadm
+        group: sapsys
+        mode: 0775
+        recurse: yes
+
+    - name: Create softlinks
+      ansible.builtin.shell:
+        cmd: ln -s /sapmnt/S4H/profile /usr/sap/S4H/SYS/profile && ln -s /sapmnt/S4H/global /usr/sap/S4H/SYS/global
+
+    - name: SWPM execute for APP
+      ansible.builtin.shell:
+        cmd: cd /media/SWPM && ./sapinst SAPINST_STACK_XML=/media/sap-installation-media/MP_Stack_1001631268_2023029_.xml SAPINST_INPUT_PARAMETERS_URL=/media/swpm-helpers/APP/inifile.params SAPINST_EXECUTE_PRODUCT_ID=NW_ABAP_CI:S4HANA2022.CORE.HDB.ABAP SAPINST_SKIP_DIALOGS=true SAPINST_START_GUISERVER=false
+

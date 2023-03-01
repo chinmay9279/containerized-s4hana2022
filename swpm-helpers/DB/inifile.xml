@@ -1,0 +1,1573 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet type="text/xsl" href="keydb.xsl" ?>
+<!DOCTYPE tables SYSTEM "keydb.dtd" >
+<!-- IMPORTANT DO NOT DELETE!!! SAPInstDes25Hash=$H/CdVuP/9Myt$BDkwLM1kxApQVwn86Ku3yTLqLwMpEdu2X1Ye3MpAN+M8+oeMKo8lcdvN7S5pGG0IZYUziVlJlZrrRzbWJfpzzcjmzBLnqUWP -->
+<!-- Installation service 'System S4H (SAP S/4HANA 2022) > SAP S/4HANA Server 2022 > SAP HANA Database > Installation > Application Server ABAP > Distributed System > Database Instance', product id 'NW_ABAP_DB:S4HANA2022.CORE.HDB.ABAP' -->
+<tables>
+<tableset  srcid="created_by_controler">
+  <table name="INIFILE_MANAGER" namespaces="INFILE_MANAGER_NS">
+    <columns>
+      <column name="CONFIG">
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_First_Steps-ind-ind-ind-ind-firstSteps-0-Preinstall-ind-ind-ind-ind-Preinstall-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="installationMode">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_pre"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="installationMode">
+        <properties>
+          <property name ="doc-long" value ="standard or custom " />
+        </properties>
+        <strval><![CDATA[custom]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_GetSidMaybeProfiles-ind-ind-ind-ind-getSid-0-NW_readProfileDir-ind-ind-ind-ind-readProfile-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="profileDir">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_pd"/>
+        </defaultproperties>
+      </column>
+      <column name="haveProfiles">
+      </column>
+      <column name="hostagentOnly">
+      </column>
+      <column name="SAP_GUI_DEFAULT_LANGUAGE">
+      </column>
+    </columns>
+    <row>
+      <fld name="profileDir">
+        <properties>
+          <property name ="doc-long" value =" Provide  'profile' directory of SAP Netweaver-based system." />
+        </properties>
+        <strval><![CDATA[/usr/sap/S4H/SYS/profile]]>
+        </strval>
+      </fld>
+      <fld name="haveProfiles">
+        <properties>
+          <property name ="doc-long" value =" Enter the path of the existing 'profile' directory." />
+        </properties>
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+      <fld name="hostagentOnly">
+        <properties>
+          <property name ="doc-long" value =" Only uninstall the host agent" />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="SAP_GUI_DEFAULT_LANGUAGE">
+        <properties>
+          <property name ="doc-long" value =" Human readable form of the Default Login language - used for instant in the preselection in SAPGUI. This Parameter is potentialy asked in addition in the dialog that also asks for the SID. It is not asked in all this dialogs, but only in systems that have ( potentialy beside others ) an ABAP stack. It is ask for installation but not for system copy. It is asked in those installations, that perform the ABAP load. That could be the Database Load installation in case of a distributed szenario, or in the Standard Installer, that is not distributed at all. This Parameter is saved in the Default Profile. It is has no influence on Language settings in a Java Stack. Valid names are stored in a table of the subcomponent NW_languagesInLoadChecks. The available languages must be declaired in the LANGUAGES_IN_LOAD parameter of the product.xml . In this file the one character representation of the languages is uses. Check the same table in the subcomponent mentioned above." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_GetSidMaybeProfiles-ind-ind-ind-ind-getSid-0-NW_GetSidFromProfilesPartial-ind-ind-ind-ind-havepf-0-NW_checkMsgServer-ind-ind-ind-ind-msgserver-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="abapMSPort">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_msgserver"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="abapMSPort">
+        <properties>
+          <property name ="doc-long" value =" ABAP message server port for connecting to the message server, leave empty for default" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_GetSidMaybeProfiles-ind-ind-ind-ind-getSid-0-NW_GetSidFromProfilesPartial-ind-ind-ind-ind-havepf-0-NW_GetUserParameter-ind-ind-ind-ind-users-0-NW_GetMasterPassword-ind-ind-ind-ind-masterpwd-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="masterPwd">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_masterpwd"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="masterPwd">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Master password" />
+        </properties>
+        <strval><![CDATA[des25(zUeAZCsPPal53dnfpY0Kr7XB)]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_GetSidMaybeProfiles-ind-ind-ind-ind-getSid-0-NW_GetSidFromProfilesPartial-ind-ind-ind-ind-havepf-0-NW_GetUserParameter-ind-ind-ind-ind-users-0-NW_GetUserParameterUnix-ind-ind-ind-ind-users_unix-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="SIDAdm_Password">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_Ux"/>
+        </defaultproperties>
+      </column>
+      <column name="SIDAdm_ID">
+      </column>
+      <column name="SIDAdm_Home">
+      </column>
+      <column name="SIDAdm_Shell">
+      </column>
+      <column name="SAPSys_ID">
+      </column>
+    </columns>
+    <row>
+      <fld name="SIDAdm_Password">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="SIDAdm_ID">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="SIDAdm_Home">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="SIDAdm_Shell">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="SAPSys_ID">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_GetSidMaybeProfiles-ind-ind-ind-ind-getSid-0-NW_GetSidFromProfilesPartial-ind-ind-ind-ind-havepf-0-NW_GetUserParameter-ind-ind-ind-ind-users-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="sapAdmPassword">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_users"/>
+        </defaultproperties>
+      </column>
+      <column name="hostAgentDomain">
+      </column>
+      <column name="sidAdmPassword">
+      </column>
+      <column name="sapServiceSIDPassword">
+      </column>
+      <column name="sapDomain">
+      </column>
+      <column name="smdAdmPassword">
+      </column>
+      <column name="sapServiceSMDPassword">
+      </column>
+      <column name="smdAgentDomain">
+      </column>
+      <column name="sidAdmUID">
+      </column>
+      <column name="sapAdmUID">
+      </column>
+      <column name="sapSysGID">
+      </column>
+    </columns>
+    <row>
+      <fld name="sapAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password for the 'sapadm' user of the SAP Host Agent" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="hostAgentDomain">
+        <properties>
+          <property name ="doc-long" value =" Windows only: The domain of the SAP Host Agent user" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sidAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" The password of the '&lt;sapsid&gt;adm' user" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sapServiceSIDPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Windows only: The password of the 'SAPServiceSID' user" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sapDomain">
+        <properties>
+          <property name ="doc-long" value =" Windows only: The domain of all users of this SAP system. Leave empty for default." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="smdAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password for the Diagnostics Agent specific &lt;dasid&gt;adm user. Provided value may be encoded." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sapServiceSMDPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Windows only: Password for the Diagnostics Agent specific 'SAPService&lt;DASID&gt;' user." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="smdAgentDomain">
+        <properties>
+          <property name ="doc-long" value =" Windows domain in which the Diagnostics Agent users must be created. This is an optional property (Windows only)." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sidAdmUID">
+        <properties>
+          <property name ="doc-long" value =" UNIX only: The user id of the &lt;sapsid&gt;adm user, leave empty for default. The ID is ignored if the user already exists." />
+        </properties>
+        <strval><![CDATA[1001]]>
+        </strval>
+      </fld>
+      <fld name="sapAdmUID">
+        <properties>
+          <property name ="doc-long" value =" UNIX only: The user ID of the 'sapadm' user, leave empty for default. The ID is ignored if the user already exists." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sapSysGID">
+        <properties>
+          <property name ="doc-long" value =" UNIX only: The group id of the 'sapsys' group, leave empty for default. The ID is ignored if the group already exists." />
+        </properties>
+        <strval><![CDATA[1001]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_GetSidMaybeProfiles-ind-ind-ind-ind-getSid-0-NW_GetSidFromProfilesPartial-ind-ind-ind-ind-havepf-0-NW_getUnicode-ind-ind-ind-ind-unicode-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="isUnicode">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_unicode"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="isUnicode">
+        <properties>
+          <property name ="doc-long" value =" ABAP system is Unicode (true|false), only needed if it cannot be determined from the system." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_GetSidMaybeProfiles-ind-ind-ind-ind-getSid-0-NW_GetSidFromProfilesPartial-ind-ind-ind-ind-havepf-0-NW_getFQDN-ind-ind-ind-ind-fqdn-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="resolve">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_fqdn"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="resolve">
+        <properties>
+          <property name ="doc-long" value =" SAP INTERNAL USE ONLY" />
+        </properties>
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_GetSidMaybeProfiles-ind-ind-ind-ind-getSid-0-NW_GetSidFromProfilesPartial-ind-ind-ind-ind-havepf-0-NW_getDBInfo-ind-ind-ind-ind-db-0-NW_getLoadType-ind-ind-ind-ind-loadType-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="loadType">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_loadType"/>
+        </defaultproperties>
+      </column>
+      <column name="doMigMonConfig">
+      </column>
+    </columns>
+    <row>
+      <fld name="loadType">
+        <properties>
+          <property name ="doc-long" value =" The load type chosen by the user. Valid values are: 'SAP', 'STD', 'OBR', 'HCP', 'MDA', 'HBR', 'SBR'" />
+        </properties>
+        <strval><![CDATA[SAP]]>
+        </strval>
+      </fld>
+      <fld name="doMigMonConfig">
+        <properties>
+          <property name ="doc-long" value =" Manual configuration and execution of Migration Monitor or manual native database copy method." />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_GetSidMaybeProfiles-ind-ind-ind-ind-getSid-0-NW_GetSidFromProfilesPartial-ind-ind-ind-ind-havepf-0-NW_getDBInfo-ind-ind-ind-ind-db-0-NW_HDB_getDBInfo-ind-ind-ind-ind-hdb_dbinfo-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="systemid">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_hdb"/>
+        </defaultproperties>
+      </column>
+      <column name="dbsid">
+      </column>
+      <column name="dbhost">
+      </column>
+      <column name="instanceNumber">
+      </column>
+      <column name="identifier">
+      </column>
+      <column name="tenantPort">
+      </column>
+      <column name="systemPassword">
+      </column>
+      <column name="dataAlreadyLoaded">
+      </column>
+      <column name="systemPasswordBackup">
+      </column>
+      <column name="systemDbPassword">
+      </column>
+      <column name="usingSSL">
+      </column>
+      <column name="systemDbSid">
+      </column>
+      <column name="createTenant">
+      </column>
+      <column name="tenantOsUser">
+      </column>
+      <column name="tenantOsGroup">
+      </column>
+    </columns>
+    <row>
+      <fld name="systemid">
+        <properties>
+          <property name ="doc-long" value =" SAP HANA system ID" />
+        </properties>
+        <strval><![CDATA[HDB]]>
+        </strval>
+      </fld>
+      <fld name="dbsid">
+        <properties>
+          <property name ="doc-long" value =" Database system ID" />
+        </properties>
+        <strval><![CDATA[HDB]]>
+        </strval>
+      </fld>
+      <fld name="dbhost">
+        <properties>
+          <property name ="doc-long" value =" Database host" />
+        </properties>
+        <strval><![CDATA[localhost]]>
+        </strval>
+      </fld>
+      <fld name="instanceNumber">
+        <properties>
+          <property name ="doc-long" value =" The instance number of the SAP HANA database server" />
+        </properties>
+        <strval><![CDATA[10]]>
+        </strval>
+      </fld>
+      <fld name="identifier">
+        <properties>
+          <property name ="doc-long" value =" Determine connection type: Using instance number and sid or port number. Default: instanceNumber" />
+        </properties>
+        <strval><![CDATA[InstanceNumber]]>
+        </strval>
+      </fld>
+      <fld name="tenantPort">
+        <properties>
+          <property name ="doc-long" value =" The SQL port for SAP HANA tenant database" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="systemPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password of  SAP HANA administration database user.'" />
+        </properties>
+        <strval><![CDATA[des25(EujBr8eQZNhPkvjIaj1s+DyC)]]>
+        </strval>
+      </fld>
+      <fld name="dataAlreadyLoaded">
+        <properties>
+          <property name ="doc-long" value =" Data has already been loaded." />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="systemPasswordBackup">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password of user 'SYSTEM' inside the SAP HANA database server from a backup" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="systemDbPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password of user 'SYSTEM' within the 'SystemDB' tenant in an SAP HANA MultiDB server" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="usingSSL">
+        <properties>
+          <property name ="doc-long" value =" Connect using SSL/TLS. Default value: false." />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="systemDbSid">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="createTenant">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="tenantOsUser">
+        <properties>
+          <property name ="doc-long" value =" A dedicated OS user for the tenant database, required for SAP HANA multitenant database containers with high isolation level." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="tenantOsGroup">
+        <properties>
+          <property name ="doc-long" value =" A dedicated OS group for the tenant database, required for SAP HANA multitenant database containers with high isolation level." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-nw_archive_and_patch_dialogs-ind-ind-ind-ind-archives_and_patches-0-archive_extraction-ind-ind-ind-ind-archives-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="DownloadBasket">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_archives"/>
+        </defaultproperties>
+      </column>
+      <column name="GuiDownloadBasket">
+      </column>
+      <column name="HelpTextDownloadLinks">
+      </column>
+    </columns>
+    <row>
+      <fld name="DownloadBasket">
+        <properties>
+          <property name ="doc-long" value =" The folder containing all archives that have been downloaded from http://support.sap.com/swdc and are supposed to be used in this procedure" />
+        </properties>
+        <strval><![CDATA[/media]]>
+        </strval>
+      </fld>
+      <fld name="GuiDownloadBasket">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="HelpTextDownloadLinks">
+        <strval><![CDATA[<html><head/><body><p>You can download the archives from the following locations on SAP Software Download Center:<br/><a href="https://launchpad.support.sap.com/#/softwarecenter/template/products/_APP=00200682500000001943&amp;_EVENT=DISPHIER&amp;HEADER=Y&amp;FUNCTIONBAR=N&amp;EVENT=TREE&amp;NE=NAVIGATE&amp;ENR=73555000100200015809&amp;V=MAINT">SAPEXE.SAR (any version supporting your release)</a></p></body></html>]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0-nw_archive_and_patch_dialogs-ind-ind-ind-ind-archives_and_patches-0_t_archiveLocations" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="identifier">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="medianame">
+      </column>
+      <column name="path">
+      </column>
+      <column name="status">
+      </column>
+    </columns>
+    <row>
+      <fld name="identifier">
+        <properties>
+          <property name ="TABLE_DOC_SHORT_LONG" value ="
+" />
+        </properties>
+        <strval><![CDATA[SAPEXE]]>
+        </strval>
+      </fld>
+      <fld name="medianame">
+        <strval><![CDATA[SAPEXE.SAR (any version supporting your release)]]>
+        </strval>
+      </fld>
+      <fld name="path">
+        <strval><![CDATA[/media/SAPEXE_52-70006642.SAR]]>
+        </strval>
+      </fld>
+      <fld name="status">
+        <strval><![CDATA[Available]]>
+        </strval>
+      </fld>
+    </row>
+    <row>
+      <fld name="identifier">
+        <properties>
+          <property name ="TABLE_DOC_SHORT_LONG" value ="
+" />
+        </properties>
+        <strval><![CDATA[SAPEXEDBHDB]]>
+        </strval>
+      </fld>
+      <fld name="medianame">
+        <strval><![CDATA[SAPEXEDB.SAR (matching SAPEXE Version and Patch)]]>
+        </strval>
+      </fld>
+      <fld name="path">
+        <strval><![CDATA[/media/SAPEXEDB_52-70006641.SAR]]>
+        </strval>
+      </fld>
+      <fld name="status">
+        <strval><![CDATA[Available]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0-nw_archive_and_patch_dialogs-ind-ind-ind-ind-archives_and_patches-0_t_archivePatches" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="patchee">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="patcher">
+      </column>
+    </columns>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0-nw_archive_and_patch_dialogs-ind-ind-ind-ind-archives_and_patches-0_t_patchLocations" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="identifier">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="medianame">
+      </column>
+      <column name="path">
+      </column>
+      <column name="status">
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_System-ind-ind-ind-ind-system-0-NW_SAPHostAgent-ind-ind-ind-ind-hostagent-0-archive_extraction-ind-ind-ind-ind-archive-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="DownloadBasket">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_archive_extraction"/>
+        </defaultproperties>
+      </column>
+      <column name="GuiDownloadBasket">
+      </column>
+      <column name="HelpTextDownloadLinks">
+      </column>
+    </columns>
+    <row>
+      <fld name="DownloadBasket">
+        <properties>
+          <property name ="doc-long" value =" The folder containing all archives that have been downloaded from http://support.sap.com/swdc and are supposed to be used in this procedure" />
+        </properties>
+        <strval><![CDATA[/media]]>
+        </strval>
+      </fld>
+      <fld name="GuiDownloadBasket">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="HelpTextDownloadLinks">
+        <strval><![CDATA[<html><head/><body><p>You can download the archives from the following locations on SAP Software Download Center:<br/><a href="https://launchpad.support.sap.com/#/softwarecenter/template/products/_APP=00200682500000001943&amp;_EVENT=DISPHIER&amp;HEADER=Y&amp;FUNCTIONBAR=N&amp;EVENT=TREE&amp;NE=NAVIGATE&amp;ENR=73554900100200011934&amp;V=MAINT">SAPHOSTAGENT.SAR (any version supporting your release)</a></p></body></html>]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_System-ind-ind-ind-ind-system-0-NW_SAPHostAgent-ind-ind-ind-ind-hostagent-0_t_archiveLocations" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="identifier">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="medianame">
+      </column>
+      <column name="path">
+      </column>
+      <column name="status">
+      </column>
+    </columns>
+    <row>
+      <fld name="identifier">
+        <properties>
+          <property name ="TABLE_DOC_SHORT_LONG" value ="
+" />
+        </properties>
+        <strval><![CDATA[SAPHOSTAGENT]]>
+        </strval>
+      </fld>
+      <fld name="medianame">
+        <strval><![CDATA[SAPHOSTAGENT.SAR (any version supporting your release)]]>
+        </strval>
+      </fld>
+      <fld name="path">
+        <strval><![CDATA[/media/SAPHOSTAGENT59_59-80004822.SAR]]>
+        </strval>
+      </fld>
+      <fld name="status">
+        <strval><![CDATA[Available]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_System-ind-ind-ind-ind-system-0-NW_adaptProfile-ind-ind-ind-ind-adaptProfile-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="templateFiles">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_adaptProfile"/>
+        </defaultproperties>
+      </column>
+      <column name="skipSecurityProfileSettings">
+      </column>
+    </columns>
+    <row>
+      <fld name="templateFiles">
+        <properties>
+          <property name ="doc-long" value =" SAP INTERNAL USE ONLY" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="skipSecurityProfileSettings">
+        <properties>
+          <property name ="doc-long" value =" SAP offers the option to skip setting of security profile parameters (NOT recommended) only for compatibility reasons. Set to true and the file with recommended security settings will not be taken into consideration. See SAP Note 2714839 for security recommendations." />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_System-ind-ind-ind-ind-system-0_t_profileParameters" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="addNumbered">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="instanceNumber">
+      </column>
+      <column name="name">
+      </column>
+      <column name="value">
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_System-ind-ind-ind-ind-system-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="installSAPHostAgent">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_system"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="installSAPHostAgent">
+        <properties>
+          <property name ="doc-long" value =" SAP INTERNAL USE ONLY" />
+        </properties>
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-nw_get_installation_backup-ind-ind-ind-ind-get_installation_backup-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="BackupArchivesFolder">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_get_installation_backup"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="BackupArchivesFolder">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_HDB_DB-ind-ind-ind-ind-nw_hdb_db-0-HDB_Server_Dialogs-ind-ind-ind-ind-hdb_dialogs-0-archive_extraction-ind-ind-ind-ind-archive-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="DownloadBasket">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_archive_extraction"/>
+        </defaultproperties>
+      </column>
+      <column name="GuiDownloadBasket">
+      </column>
+      <column name="HelpTextDownloadLinks">
+      </column>
+    </columns>
+    <row>
+      <fld name="DownloadBasket">
+        <properties>
+          <property name ="doc-long" value =" The folder containing all archives that have been downloaded from http://support.sap.com/swdc and are supposed to be used in this procedure" />
+        </properties>
+        <strval><![CDATA[/media]]>
+        </strval>
+      </fld>
+      <fld name="GuiDownloadBasket">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="HelpTextDownloadLinks">
+        <strval><![CDATA[<html><head/><body><p>You can download the archives from the following locations on SAP Software Download Center:<br/><a href="https://launchpad.support.sap.com/#/softwarecenter/template/products/_APP=00200682500000001943&amp;_EVENT=DISPHIER&amp;HEADER=Y&amp;FUNCTIONBAR=N&amp;EVENT=TREE&amp;NE=NAVIGATE&amp;ENR=73554900100200005327&amp;V=MAINT">SAP HANA DATABASE</a></p></body></html>]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_HDB_DB-ind-ind-ind-ind-nw_hdb_db-0-HDB_Server_Dialogs-ind-ind-ind-ind-hdb_dialogs-0_t_archiveLocations" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="identifier">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="medianame">
+      </column>
+      <column name="path">
+      </column>
+      <column name="status">
+      </column>
+    </columns>
+    <row>
+      <fld name="identifier">
+        <properties>
+          <property name ="TABLE_DOC_SHORT_LONG" value ="
+" />
+        </properties>
+        <strval><![CDATA[SAPHANASERVER]]>
+        </strval>
+      </fld>
+      <fld name="medianame">
+        <strval><![CDATA[SAP HANA DATABASE]]>
+        </strval>
+      </fld>
+      <fld name="path">
+        <strval><![CDATA[/media/IMDB_SERVER20_066_0-80002031.SAR]]>
+        </strval>
+      </fld>
+      <fld name="status">
+        <strval><![CDATA[Available]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_HDB_DB-ind-ind-ind-ind-nw_hdb_db-0-HDB_Server_Dialogs-ind-ind-ind-ind-hdb_dialogs-0-HDB_Server_Install-ind-ind-ind-ind-hdb_server_install-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="useHdbLcm">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_HDB_Install"/>
+        </defaultproperties>
+      </column>
+      <column name="installationComponents">
+      </column>
+      <column name="SapHostAgentUserPassword">
+      </column>
+      <column name="installSAPHostAgent">
+      </column>
+    </columns>
+    <row>
+      <fld name="useHdbLcm">
+        <properties>
+          <property name ="doc-long" value =" Specify whether SAP HANA server is to be installed with 'hdblcm'.  Default is using 'hdblcm' (true). Optionally you can  use 'hdbinst', then you must set this parameter to 'false' ." />
+        </properties>
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+      <fld name="installationComponents">
+        <properties>
+          <property name ="doc-long" value =" SAP INTERNAL USE ONLY" />
+        </properties>
+        <strval><![CDATA[server]]>
+        </strval>
+      </fld>
+      <fld name="SapHostAgentUserPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" The password of the SAP Host Agent user 'sapadm'." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="installSAPHostAgent">
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_HDB_DB-ind-ind-ind-ind-nw_hdb_db-0-HDB_Server_Dialogs-ind-ind-ind-ind-hdb_dialogs-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="instanceNumber">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_hdb_dialogs"/>
+        </defaultproperties>
+      </column>
+      <column name="sapmnt">
+      </column>
+      <column name="sidadm_id">
+      </column>
+      <column name="useHANAMediaCD">
+      </column>
+    </columns>
+    <row>
+      <fld name="instanceNumber">
+        <properties>
+          <property name ="doc-long" value =" The instance number of the SAP HANA database to be installed." />
+        </properties>
+        <strval><![CDATA[10]]>
+        </strval>
+      </fld>
+      <fld name="sapmnt">
+        <properties>
+          <property name ="doc-long" value =" The installation path(sapmnt) directory for SAP HANA database to be installed. Default value is /hana/shared." />
+        </properties>
+        <strval><![CDATA[/hana/shared]]>
+        </strval>
+      </fld>
+      <fld name="sidadm_id">
+        <properties>
+          <property name ="doc-long" value =" The  uid for the user admin  for the SAP HANA database to be installed." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="useHANAMediaCD">
+        <properties>
+          <property name ="doc-long" value =" Use SAP HANA Client CD, not SAR archive" />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_HDB_DB-ind-ind-ind-ind-nw_hdb_db-0-archive_extraction-ind-ind-ind-ind-apl-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="DownloadBasket">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_archive_extraction"/>
+        </defaultproperties>
+      </column>
+      <column name="GuiDownloadBasket">
+      </column>
+      <column name="HelpTextDownloadLinks">
+      </column>
+    </columns>
+    <row>
+      <fld name="DownloadBasket">
+        <properties>
+          <property name ="doc-long" value =" The folder containing all archives that have been downloaded from http://support.sap.com/swdc and are supposed to be used in this procedure" />
+        </properties>
+        <strval><![CDATA[/media]]>
+        </strval>
+      </fld>
+      <fld name="GuiDownloadBasket">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="HelpTextDownloadLinks">
+        <strval><![CDATA[<html><head/><body><p>You can download the archives from the following locations on SAP Software Download Center:<br/><a href="https://launchpad.support.sap.com/#/softwarecenter/template/products/_APP=00200682500000001943&amp;_EVENT=DISPHIER&amp;HEADER=Y&amp;FUNCTIONBAR=N&amp;EVENT=TREE&amp;NE=NAVIGATE&amp;ENR=73554900100200010916&amp;V=MAINT&amp;TA=ACTUAL&amp;PAGE=SEARCH/APL%204%20FOR%20HANA%202%20SP03+">SAP HANA Automated Predictive Library</a>, <a href="https://launchpad.support.sap.com/#/softwarecenter/search/SP12%2520for%2520UMML4HANA%25201">HANA DU for Unified Model Manager 1</a></p></body></html>]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_HDB_DB-ind-ind-ind-ind-nw_hdb_db-0_t_aplArchiveLocation" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="identifier">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="medianame">
+      </column>
+      <column name="path">
+      </column>
+      <column name="status">
+      </column>
+    </columns>
+    <row>
+      <fld name="identifier">
+        <properties>
+          <property name ="TABLE_DOC_SHORT_LONG" value ="
+" />
+        </properties>
+        <strval><![CDATA[SAPHANAAPL_LINUXX86_64]]>
+        </strval>
+      </fld>
+      <fld name="medianame">
+        <strval><![CDATA[SAP HANA Automated Predictive Library]]>
+        </strval>
+      </fld>
+      <fld name="path">
+        <strval><![CDATA[/media/SAPPAAPL4_2203_2-80004547.ZIP]]>
+        </strval>
+      </fld>
+      <fld name="status">
+        <strval><![CDATA[Available]]>
+        </strval>
+      </fld>
+    </row>
+    <row>
+      <fld name="identifier">
+        <properties>
+          <property name ="TABLE_DOC_SHORT_LONG" value ="
+" />
+        </properties>
+        <strval><![CDATA[HANA_UMML]]>
+        </strval>
+      </fld>
+      <fld name="medianame">
+        <strval><![CDATA[HANA DU for Unified Model Manager 1]]>
+        </strval>
+      </fld>
+      <fld name="path">
+        <strval><![CDATA[/media/HANAUMML12_6-70001054.ZIP]]>
+        </strval>
+      </fld>
+      <fld name="status">
+        <strval><![CDATA[Available]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_HDB_DB-ind-ind-ind-ind-nw_hdb_db-0-HDB_Userstore-ind-ind-ind-ind-hdb_userstore-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="doNotResolveHostnames">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_hdb_userstore"/>
+        </defaultproperties>
+      </column>
+      <column name="useABAPSSFS">
+      </column>
+      <column name="HDB_USE_IDENT">
+      </column>
+      <column name="systemDBPort">
+      </column>
+    </columns>
+    <row>
+      <fld name="doNotResolveHostnames">
+        <properties>
+          <property name ="doc-long" value =" Database hostnames that will be set directly in hdbuserstore without resolving them in HANA. Comma separated. Example (host1,host2)" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="useABAPSSFS">
+        <properties>
+          <property name ="doc-long" value =" Use ABAP secure store instead of HANA userstore. Default: false for HANA user store." />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="HDB_USE_IDENT">
+        <properties>
+          <property name ="doc-long" value =" Name for container (folder) for the HANA Userstore files." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="systemDBPort">
+        <properties>
+          <property name ="doc-long" value =" Alternative port for SystemDB to be used in hdbuserstore" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_CreateDB-ind-ind-ind-ind-createdb-0-NW_HDB_DB-ind-ind-ind-ind-nw_hdb_db-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="abapSchemaName">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_nw_hdb_db"/>
+        </defaultproperties>
+      </column>
+      <column name="abapSchemaPassword">
+      </column>
+      <column name="javaSchemaName">
+      </column>
+      <column name="javaSchemaPassword">
+      </column>
+      <column name="createDbaCockpitUser">
+      </column>
+      <column name="dbacockpitPassword">
+      </column>
+      <column name="installPAi">
+      </column>
+    </columns>
+    <row>
+      <fld name="abapSchemaName">
+        <properties>
+          <property name ="doc-long" value =" ABAP schema name" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="abapSchemaPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password of the ABAP schema user" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="javaSchemaName">
+        <properties>
+          <property name ="doc-long" value =" JAVA schema name" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="javaSchemaPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password of the JAVA schema user" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="createDbaCockpitUser">
+        <properties>
+          <property name ="doc-long" value =" DBACOCKPIT user is to be created. Default value is 'true'." />
+        </properties>
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+      <fld name="dbacockpitPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Password of the DBACOCKPIT user" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="installPAi">
+        <properties>
+          <property name ="doc-long" value =" Install SAP Predictive Analytics integrator (PAi) in UDI mode. Possiable values 'stack', 'true' or 'false'. Default value is 'stack'(install PAi is found in stack.xml)." />
+        </properties>
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_Recovery_Install_HDB-ind-ind-ind-ind-recovery_install_hdb-0-HDB_Server_DU_UMML_Install-ind-ind-ind-ind-du_install-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="backupLocation">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_hdb_du_umml_install"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="backupLocation">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0-NW_Recovery_Install_HDB-ind-ind-ind-ind-recovery_install_hdb-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="sidAdmName">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_recovery_install_hdb"/>
+        </defaultproperties>
+      </column>
+      <column name="sidAdmPassword">
+      </column>
+      <column name="sapControlWsdlUrl">
+      </column>
+      <column name="backupLocationSAP">
+      </column>
+      <column name="backupLocationHANA">
+      </column>
+      <column name="checkIntegrity">
+      </column>
+      <column name="extractLocation">
+      </column>
+      <column name="extractParallelJobs">
+      </column>
+      <column name="loadOrMount">
+      </column>
+    </columns>
+    <row>
+      <fld name="sidAdmName">
+        <properties>
+          <property name ="doc-long" value =" The OS user of the HANA '&lt;dbsid&gt;adm' user" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sidAdmPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" The password of the OS HANA '&lt;dbsid&gt;adm' user" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="sapControlWsdlUrl">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="backupLocationSAP">
+        <properties>
+          <property name ="doc-long" value =" Location for HANA backup files on the SAP Application Server host." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="backupLocationHANA">
+        <properties>
+          <property name ="doc-long" value =" Location for HANA backup files on the HANA database host (as delivered by SAP)." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="checkIntegrity">
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="extractLocation">
+        <properties>
+          <property name ="doc-long" value =" Location for HANA backup files on the HANA database host (Target location for ABAP export archives). Default value: /usr/sap/&lt;SID&gt;/HDB&lt;nn&gt;/backup/data/&lt;Database_name&gt;" />
+        </properties>
+        <strval><![CDATA[/usr/sap/HDB/HDB10/backup/data/DB_HDB]]>
+        </strval>
+      </fld>
+      <fld name="extractParallelJobs">
+        <properties>
+          <property name ="doc-long" value =" Number of concurrent jobs used to load and/or extract archives to HANA Host" />
+        </properties>
+        <strval><![CDATA[10]]>
+        </strval>
+      </fld>
+      <fld name="loadOrMount">
+        <properties>
+          <property name ="doc-long" value =" Archives or backup files are to be loaded by SWPM or are already available(mounted) on the HANA host. Possible values are: load (default) or mount." />
+        </properties>
+        <strval><![CDATA[load]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_CreateDBandLoad-ind-ind-ind-ind-createdbandload-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="movePVCforUsagePiAndDi">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_createDBandLoad"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="movePVCforUsagePiAndDi">
+        <properties>
+          <property name ="doc-long" value =" System copy AS Java with product instance Process Integration and/or Development Infrastructure: Specify whether the target system should replace the source system. Possible values are  'true' or 'false'." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0_t_r3LoadEnviroment" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="Name">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="Value">
+      </column>
+    </columns>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0_t_r3LoadParameter" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="Value">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_Unpack2-ind-ind-ind-ind-unpack-0-NW_SAPCrypto-ind-ind-ind-ind-crypto-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="SAPCryptoFile">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_cryptoContext"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="SAPCryptoFile">
+        <properties>
+          <property name ="doc-long" value =" DEPRECATED, DO NOT USE!" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_Unpack2-ind-ind-ind-ind-unpack-0_t_cryptoTable" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="path">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="sid">
+      </column>
+      <column name="unpackThis">
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_Unpack2-ind-ind-ind-ind-unpack-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="SAPEXESAR">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_unpack"/>
+        </defaultproperties>
+      </column>
+      <column name="SAPEXEDBSAR">
+      </column>
+      <column name="IGSEXESAR">
+      </column>
+      <column name="IGSHELPERSAR">
+      </column>
+      <column name="SAPJVMSAR">
+      </column>
+      <column name="DBATOOLSSAR">
+      </column>
+      <column name="XS2SAR">
+      </column>
+    </columns>
+    <row>
+      <fld name="SAPEXESAR">
+        <properties>
+          <property name ="doc-long" value =" DEPRECATED, DO NOT USE!" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="SAPEXEDBSAR">
+        <properties>
+          <property name ="doc-long" value =" DEPRECATED, DO NOT USE!" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="IGSEXESAR">
+        <properties>
+          <property name ="doc-long" value =" DEPRECATED, DO NOT USE!" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="IGSHELPERSAR">
+        <properties>
+          <property name ="doc-long" value =" DEPRECATED, DO NOT USE!" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="SAPJVMSAR">
+        <properties>
+          <property name ="doc-long" value =" DEPRECATED, DO NOT USE!" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="DBATOOLSSAR">
+        <properties>
+          <property name ="doc-long" value =" DEPRECATED, DO NOT USE!" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="XS2SAR">
+        <properties>
+          <property name ="doc-long" value =" DEPRECATED, DO NOT USE!" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0_t_askUnpack" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="codepage">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="ctx">
+      </column>
+      <column name="destination">
+      </column>
+      <column name="ownPath">
+      </column>
+      <column name="path">
+      </column>
+      <column name="sid">
+      </column>
+      <column name="unpack">
+      </column>
+    </columns>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_DBClient-ind-ind-ind-ind-dbclient-0-NW_HDB_DBClient-ind-ind-ind-ind-nw_hdb_client-0-HDB_Client_Dialogs-ind-ind-ind-ind-hdb_client_dialogs-0-archive_extraction-ind-ind-ind-ind-archive-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="DownloadBasket">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_archive_extraction"/>
+        </defaultproperties>
+      </column>
+      <column name="GuiDownloadBasket">
+      </column>
+      <column name="HelpTextDownloadLinks">
+      </column>
+    </columns>
+    <row>
+      <fld name="DownloadBasket">
+        <properties>
+          <property name ="doc-long" value =" The folder containing all archives that have been downloaded from http://support.sap.com/swdc and are supposed to be used in this procedure" />
+        </properties>
+        <strval><![CDATA[/media]]>
+        </strval>
+      </fld>
+      <fld name="GuiDownloadBasket">
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="HelpTextDownloadLinks">
+        <strval><![CDATA[<html><head/><body><p>You can download the archives from the following locations on SAP Software Download Center:<br/><a href="https://launchpad.support.sap.com/#/softwarecenter/template/products/_APP=00200682500000001943&amp;_EVENT=DISPHIER&amp;HEADER=Y&amp;FUNCTIONBAR=N&amp;EVENT=TREE&amp;NE=NAVIGATE&amp;ENR=73554900100200005390&amp;V=MAINT">SAP HANA CLIENT</a></p></body></html>]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="ParameterTable-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_DBClient-ind-ind-ind-ind-dbclient-0-NW_HDB_DBClient-ind-ind-ind-ind-nw_hdb_client-0-HDB_Client_Dialogs-ind-ind-ind-ind-hdb_client_dialogs-0_t_archiveLocations" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="identifier">
+        <defaultproperties>
+          <property name="TABLE_DOC_SHORT_LONG" value="
+"/>
+        </defaultproperties>
+      </column>
+      <column name="medianame">
+      </column>
+      <column name="path">
+      </column>
+      <column name="status">
+      </column>
+    </columns>
+    <row>
+      <fld name="identifier">
+        <properties>
+          <property name ="TABLE_DOC_SHORT_LONG" value ="
+" />
+        </properties>
+        <strval><![CDATA[SAPHANACLIENT]]>
+        </strval>
+      </fld>
+      <fld name="medianame">
+        <strval><![CDATA[SAP HANA CLIENT]]>
+        </strval>
+      </fld>
+      <fld name="path">
+        <strval><![CDATA[/media/IMDB_CLIENT20_015_19-80002082.SAR]]>
+        </strval>
+      </fld>
+      <fld name="status">
+        <strval><![CDATA[Available]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_DBClient-ind-ind-ind-ind-dbclient-0-NW_HDB_DBClient-ind-ind-ind-ind-nw_hdb_client-0-HDB_Client_Dialogs-ind-ind-ind-ind-hdb_client_dialogs-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="useHANAMediaCD">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_hdb_client"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="useHANAMediaCD">
+        <properties>
+          <property name ="doc-long" value =" Use SAP HANA Media on CD, do not ask for SAR archives" />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_DBClient-ind-ind-ind-ind-dbclient-0-NW_HDB_DBClient-ind-ind-ind-ind-nw_hdb_client-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="lvmSapSidSchemaPassword">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_hdb_dbclient"/>
+        </defaultproperties>
+      </column>
+      <column name="lvmSapSidDbSchemaPassword">
+      </column>
+      <column name="clientPathStrategy">
+      </column>
+      <column name="createDbaCockpitUser">
+      </column>
+      <column name="checkCreateUserstore">
+      </column>
+      <column name="setNewSchemaPassword">
+      </column>
+      <column name="useCertificateAuthentication">
+      </column>
+      <column name="x509CertificatePath">
+      </column>
+    </columns>
+    <row>
+      <fld name="lvmSapSidSchemaPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" ABAP schema password" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="lvmSapSidDbSchemaPassword">
+        <properties>
+          <property name ="ENCODE_VALUE" value ="YES" />
+          <property name ="doc-long" value =" Sets the SAP&lt;SAPSID&gt;DB schema password using a  parameter file." />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+      <fld name="clientPathStrategy">
+        <properties>
+          <property name ="doc-long" value =" Install the SAP HANA database client in a central or local directory. Possible values are: 'SAPCPE', 'LOCAL'" />
+        </properties>
+        <strval><![CDATA[SAPCPE]]>
+        </strval>
+      </fld>
+      <fld name="createDbaCockpitUser">
+        <properties>
+          <property name ="doc-long" value =" DBACOCKPIT user is to be created. Default value is 'false'." />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="checkCreateUserstore">
+        <properties>
+          <property name ="doc-long" value =" Skip checking if creating a HANA user store is needed. Default value is 'true'. If set to 'false', a valid HANA userstore must exists." />
+        </properties>
+        <strval><![CDATA[true]]>
+        </strval>
+      </fld>
+      <fld name="setNewSchemaPassword">
+        <properties>
+          <property name ="doc-long" value =" Set the ABAP schema password to the same given to for userstore. Possible values are: true or false(default)" />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="useCertificateAuthentication">
+        <properties>
+          <property name ="doc-long" value =" Set X.509 certificate authentication for ABAP user" />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+      <fld name="x509CertificatePath">
+        <properties>
+          <property name ="doc-long" value =" Set the path to the X.509 certificate for authentication" />
+        </properties>
+        <strval><![CDATA[]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0-NW_Remove_Sapinst_Users-ind-ind-ind-ind-removal-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="removeUsers">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="t_remove_sapinst_users"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="removeUsers">
+        <properties>
+          <property name ="doc-long" value =" Specify whether the all operating system users are to be removed from group 'sapinst' after the execution of Software Provisioning Manager has completed." />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+  <table name="-NW_ABAP_DB-ind-ind-ind-ind-0-0" namespaces="INIFILE_PARAMETER">
+    <columns>
+      <column name="enableImig">
+        <defaultproperties>
+          <property name="SAPINST_ORIGINAL_TABLE_NAME" value="NW_ABAP_DB_CONTEXT"/>
+        </defaultproperties>
+      </column>
+    </columns>
+    <row>
+      <fld name="enableImig">
+        <properties>
+          <property name ="doc-long" value =" 'true' if IMIG should be enabled." />
+        </properties>
+        <strval><![CDATA[false]]>
+        </strval>
+      </fld>
+    </row>
+  </table>
+</tableset>
+</tables>
